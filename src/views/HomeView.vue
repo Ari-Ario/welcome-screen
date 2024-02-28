@@ -19,8 +19,9 @@ import card from '../components/screenCompos/mainCard.vue'
 main {
   display: block;
   top: 0;
+  margin-top: 0;
   text-align: center;
-  width: 94vw;
+  width: auto;
 
 }
 </style>

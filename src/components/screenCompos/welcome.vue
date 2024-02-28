@@ -17,9 +17,26 @@ span {
   top: 0;
   text-align: center;
   font-size: 3rem;
-  color: white;
-  width: 100%;
-  border: 1px solid white;
+  color: antiquewhite;
+  border: 1px solid antiquewhite;
   border-radius: 2vw;
+}
+
+@media (max-width: 784px) {
+    #welcome-cont {
+    font-size: 1.5rem;
+}
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>

@@ -17,8 +17,8 @@ span {
   top: 0;
   text-align: center;
   font-size: 2rem;
-  color: white;
-  width: 100%;
+  color: antiquewhite;
+    margin-top: 2vh;
   /* border: 1px solid white; */
   border-radius: 2vw;
 }

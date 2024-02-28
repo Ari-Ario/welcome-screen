@@ -18,4 +18,10 @@ const props = defineProps({
     margin-top: 2vh;
     border-radius: 2vw;
 }
+
+@media (max-width: 784px) {
+    .info-container {
+    font-size: 1.5rem;
+}
+}
 </style>
