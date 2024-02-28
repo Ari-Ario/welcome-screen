@@ -15,10 +15,10 @@ async function fetchData() {
   const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheet_id}/values:batchGet?ranges=A2%3AE100&valueRenderOption=FORMATTED_VALUE&key=${api_token}`);
   const data = await res.json();
   console.log(data)
-  // name.value = data.valueRange.name.first;
-  // date.value = data.results[0].name.first;
-  // description.value = data.results[0].name.last;
-  // dataUrl.value = data.results[0].email;
+  name.value = data.valueRanges[0].values[0];
+  date.value = data.valueRanges[0].values[1];
+  description.value = data.valueRanges[0].values[1];
+  dataUrl.value = data.valueRanges[0].values[2];
 }
 const allData= fetchData() 
 </script>
