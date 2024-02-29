@@ -2,11 +2,17 @@
 import { defineProps } from 'vue';
 const props = defineProps({
   info: String,
+  descritpion: String,
+  address: String
 }
   );
 </script>
 <template>
-    <div v-if="info" class="info-container">{{ info }}</div>
+  <div>
+    <h2>{{ title }}</h2>
+    <p>{{  descritpion }}</p>
+  </div>
+    <div v-if="info" class="info-container" :info="info" :description="descritpion" :address="address">{{ info }} {{ descritpion }} {{ address }}</div>
 </template>
 
 <style scoped>

@@ -1,9 +1,15 @@
 <script setup>
 // import { defineProps } from 'vue';
-const welcome= '28.02.2024';
+import { defineProps } from 'vue';
+const props = defineProps({
+  day: String,
+}
+  );
+
+// AIzaSyCQsMBv9KSBUdC7775MULa8oXjLFbfpPOQ
 </script>
 <template>
-    <div id="welcome-cont">{{ welcome }}</div>
+      <div v-if="day" id="day-cont">{{ day }} </div>
 </template>
 
 <style scoped>
@@ -12,7 +18,7 @@ span {
     color: white;
 }
 
-#welcome-cont {
+#day-cont {
   display: block;
   top: 0;
   text-align: center;

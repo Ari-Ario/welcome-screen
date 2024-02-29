@@ -40,3 +40,5 @@ span {
   }
 }
 </style>
+
+<!-- https://sheets.googleapis.com/v4/spreadsheets/1IAGOE_1tRhcRyWzO9em6nURZVM5acZwKJlAR7i-EPB8/values:batchGet?ranges=A2%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyAjqWVpPTytrIE1ZRqtrbUOht2chryeDCk -->
