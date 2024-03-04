@@ -1,6 +1,16 @@
 # welcome-screen
+layout on Figma:
+https://www.figma.com/file/tUmngZnM1QJePLVRLV2NON/Untitled?type=design&node-id=0%3A1&mode=design&t=wEry4kmm4acMCMVn-1
 
-This template should help get you started developing with Vue 3 in Vite.
+
+
+
+
+
+
+
+
+
 
 ## Recommended IDE Setup
 
