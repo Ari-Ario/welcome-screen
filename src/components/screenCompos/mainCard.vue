@@ -14,40 +14,31 @@ let currentYear = date.getFullYear();
 
 // we will display the date as DD-MM-YYYY 
 
-let currentDate = `${currentDay}.${currentMonth}.${currentYear}`;
+let currentDate = ref(`${currentDay}.${currentMonth}.${currentYear}`);
 
+const data = ref("")
 const dateDB = ref("")
-const time = ref("")
-const description = ref("")
-const address = ref("")
-const newRow = ref("")
 
 async function fetchData() {
   const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheet_id}/values:batchGet?ranges=A2%3AE100&valueRenderOption=FORMATTED_VALUE&key=${api_token}`);
   const fetchedData = await res.json();
-  let data= fetchedData.valueRanges[0].values
-  for(let i=0; i<=data.length; i++){
+  data.value= fetchedData.valueRanges[0].values
 
-    if (data[i][1] === currentDate){
-      time.value = data[i][0];
-      dateDB.value = data[i][1];
-      description.value = data[i][2];
-      address.value = data[i][3];
+   for(let i=0; i<=data.value.length; i++){
+      dateDB.value = fetchedData.valueRanges[0].values[i][1]
     }
   }
-}
-const allData= fetchData() 
+
+fetchData()
 </script>
 
 <template>
   <div class="user-container">
     <welcome />
-    <day :day="dateDB" />
-      <div class="info-container">
-        <info :info="time" :descritpion="description" :address="address"/>
-        <!-- <info :info="description" />
-        <info class="user-email" :info="address" /> -->
-        <button class="card-button" @click="fetchData()">Next</button>
+    <day :day="currentDate" />
+      <div v-for="(row, index) in data" class="info-container" :key="index">
+        <info :time="row[0]" :descritpion="row[2]" :address="row[3]"/>
+        <!-- <button class="card-button" @click="fetchData()">Next</button> -->
       </div>
     </div>
 </template>
@@ -57,6 +48,7 @@ const allData= fetchData()
   display: block;
   top: 0;
   text-align: center;
+  font-size: 1.5rem;
 }
 .card-button {
     font-size: 3rem;

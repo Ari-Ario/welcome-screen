@@ -7,6 +7,9 @@ import home from './views/HomeView.vue'
   <div class="main">
     <home />
   </div>
+  <footer class="footer">
+      <img src="./SAG_Logo_De.png" alt="">
+    </footer>
 </template>
 
 <style scoped>
@@ -15,6 +18,17 @@ import home from './views/HomeView.vue'
   top: 0;
   text-align: center;
   width: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.footer img {
+  display: block;
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  padding-left: 4vw;
 }
 
 @media (min-width: 784px) {

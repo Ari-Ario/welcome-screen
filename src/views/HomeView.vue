@@ -22,6 +22,6 @@ main {
   margin-top: 0;
   text-align: center;
   width: auto;
-
 }
+
 </style>
