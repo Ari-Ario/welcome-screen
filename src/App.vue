@@ -22,13 +22,16 @@ import home from './views/HomeView.vue'
 .footer {
   position: absolute;
   bottom: 0;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 .footer img {
   display: block;
-  width: 90%;
-  height: 100%;
+  width: 100%;
+
   object-fit: contain;
-  padding-left: 4vw;
 }
 
 @media (min-width: 784px) {
