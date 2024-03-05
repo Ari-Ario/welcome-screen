@@ -18,6 +18,7 @@ let currentDate = ref(`${currentDay}.${currentMonth}.${currentYear}`);
 
 const data = ref("")
 const dateDB = ref("")
+const timeInterval = ref("")
 
 async function fetchData() {
   const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheet_id}/values:batchGet?ranges=A2%3AE100&valueRenderOption=FORMATTED_VALUE&key=${api_token}`);
@@ -30,6 +31,13 @@ async function fetchData() {
   }
 
 fetchData()
+onMounted( () => {
+  timeInterval.value = setInterval(() => {
+    fetchData()
+  }
+  , 1000*60*30)
+});
+
 </script>
 
 <template>
